@@ -23,7 +23,7 @@
 body {
     font-family: 'Nunito', 'Segoe UI', sans-serif;
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.7; /* Increased from 1.6 */
     background-color: var(--background-color);
 }
 
@@ -398,3 +398,40 @@ footer a:hover {
         font-size: 2.5rem;
     }
 }
+
+/* --- Appended Modernization Tweaks --- */
+
+/* General Anchor Styling (for links in main content) */
+/* Exclude nav, btn, and footer links which have specific styles */
+main a:not(.btn):not(.nav-link):not(.navbar-brand):not(.breadcrumb-item), 
+section a:not(.btn):not(.nav-link):not(.navbar-brand):not(.breadcrumb-item) { /* Target links within main content sections */
+    color: var(--primary-color);
+    text-decoration: none; /* No underline by default */
+    transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+}
+
+main a:not(.btn):not(.nav-link):not(.navbar-brand):not(.breadcrumb-item):hover,
+main a:not(.btn):not(.nav-link):not(.navbar-brand):not(.breadcrumb-item):focus,
+section a:not(.btn):not(.nav-link):not(.navbar-brand):not(.breadcrumb-item):hover,
+section a:not(.btn):not(.nav-link):not(.navbar-brand):not(.breadcrumb-item):focus {
+    color: var(--secondary-color); /* Or a darker shade of primary */
+    text-decoration: underline;
+}
+
+/* Enhanced Button Interactivity */
+.btn {
+    transition: background-color 0.2s ease-in-out, 
+                border-color 0.2s ease-in-out, 
+                color 0.2s ease-in-out, 
+                transform 0.15s ease-in-out, 
+                box-shadow 0.15s ease-in-out; /* Added box-shadow transition */
+}
+
+.btn:hover, .btn:focus {
+    transform: translateY(-2px); /* Slightly more noticeable lift */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Add a subtle shadow on hover/focus for depth */
+}
+
+/* Ensure specific button hover styles (like bg color change) from existing rules still apply */
+/* For example, .btn-primary:hover background-color should still work. */
+/* The transform and box-shadow will be additive. */
