@@ -1,10 +1,10 @@
 /* Care-Filled Support for Meg - CSS Theme
-   Based on logo colors with complementary yellow accent
-   Primary: #CE2D2D (red heart)
-   Secondary: #F795AD (pink heart)
-   Background: #FFF0F5 (light pink)
-   Accent: #FDDC5C (butter yellow)
-   Text: #333333 (dark gray)
+    Based on logo colors with complementary yellow accent
+    Primary: #CE2D2D (red heart)
+    Secondary: #F795AD (pink heart)
+    Background: #FFF0F5 (light pink)
+    Accent: #FDDC5C (butter yellow)
+    Text: #333333 (dark gray)
 */
 
 :root {
@@ -28,20 +28,22 @@ body {
 }
 
 /* Typography */
-h1, .display-4 { /* Keep Dancing Script for main titles */
+h1, h2, .display-4 { /* .display-4 often acts like a H1/H2 */
     font-family: 'Dancing Script', cursive;
     font-weight: 700;
     color: var(--text-color);
 }
 
-h2, h3, h4, h5, h6 { /* Use Nunito for other headings for readability */
+h3, h4, h5, h6 {
     font-family: 'Nunito', 'Segoe UI', sans-serif;
-    font-weight: 700;
+    font-weight: 600; /* Or 700 if more emphasis is needed, but distinct from H1/H2 */
     color: var(--text-color);
+    margin-top: 1.25rem; /* Add some default top margin for subheadings */
+    margin-bottom: 0.75rem;
 }
 
-.display-4 { /* Ensure .display-4 is explicitly Dancing Script if not always on h1 */
-    font-family: 'Dancing Script', cursive; /* This might be redundant if .display-4 is always on an h1, but safe */
+.display-4 {
+    font-family: 'Dancing Script', cursive;
     font-weight: 700;
     font-size: 3.5rem;
 }
@@ -128,9 +130,9 @@ h2, h3, h4, h5, h6 { /* Use Nunito for other headings for readability */
     border-color: var(--secondary-color);
     color: var(--white);
     /* Note: --secondary-color (#F795AD) vs --white for text has low contrast (2.01:1).
-       This button uses white text on pink background, which is fine.
-       If --secondary-color were used as text on a light background, it would need darkening.
-       e.g., a darker pink like #D96282 or #C04D6F.
+        This button uses white text on pink background, which is fine.
+        If --secondary-color were used as text on a light background, it would need darkening.
+        e.g., a darker pink like #D96282 or #C04D6F.
     */
 }
 
@@ -301,27 +303,29 @@ footer.bg-dark .text-white {
     color: #fffbe6 !important; /* Creamy light for headings and text */
 }
 
-footer.bg-dark a,
-footer.bg-dark a.text-white,
-footer.bg-dark .social-icons a {
-    color: #D32D2F !important; /* Primary Red from your logo */
+footer.bg-dark a { /* General links in footer */
+    color: var(--gray-light) !important;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
-footer.bg-dark a:hover,
-footer.bg-dark a.text-white:hover,
-footer.bg-dark .social-icons a:hover {
-    color: #FFE066 !important; /* Accent Yellow from your logo */
+footer.bg-dark a:hover { /* General links hover */
+    color: var(--accent-color) !important;
     text-decoration: underline;
 }
+
+/* Default color for social icons in the dark footer */
+footer.bg-dark .social-icons a {
+    color: var(--gray-light) !important; 
+}
+/* The existing .social-icons a:hover rule will handle the specific hover for social icons */
 
 footer.bg-dark hr {
     border-top: 1px solid #fffbe6;
 }
 
 /* The following footer.bg-dark rule was a duplicate, overriding only the background.
-   Removing it to retain the original pink-to-brown gradient and associated text/link styles from the first definition.
+    Removing it to retain the original pink-to-brown gradient and associated text/link styles from the first definition.
 footer.bg-dark {
     background: linear-gradient(135deg, var(--text-color) 0%, #4A3E40 100%) !important;
 }
@@ -333,11 +337,11 @@ footer a {
 
 footer a:hover {
     color: var(--accent-color) !important; /* Yellow accent on hover */
-    text-decoration: none;
+    text-decoration: none; /* This was already specified for general links, but ensure it's not conflicting if there are other 'footer a' rules */
 }
 
 .social-icons a {
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Added color transition */
     display: inline-block;
     width: 40px;
     height: 40px;

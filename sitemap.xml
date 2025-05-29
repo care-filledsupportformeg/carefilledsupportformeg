@@ -9,15 +9,23 @@
       <image:loc>https://carefilledsupportformeg.com/images/meagan/meagan3.jpg</image:loc>
       <image:title>Meagan's inspiring journey</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://carefilledsupportformeg.com/images/logo/logo.png</image:loc>
+      <image:title>Care-Filled Support for Meg Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://carefilledsupportformeg.com/images/logo/logo6.png</image:loc>
+      <image:title>Care-Filled Support for Meg Video Poster</image:title> <!-- Video poster -->
+    </image:image>
   </url>
   <url>
     <loc>https://carefilledsupportformeg.com/about.html</loc>
     <image:image>
-      <image:loc>https://carefilledsupportformeg.com/images/team/team3.png</image:loc>
-      <image:title>Elaine - Lead Caregiver</image:title>
+      <image:loc>https://carefilledsupportformeg.com/images/team/team2.jpg</image:loc> <!-- Elaine -->
+      <image:title>Elaine - Caregiver</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://carefilledsupportformeg.com/images/team/team2.jpg</image:loc>
+      <image:loc>https://carefilledsupportformeg.com/images/team/team3.png</image:loc> <!-- Charmaine -->
       <image:title>Charmaine - Caregiver</image:title>
     </image:image>
     <image:image>
@@ -32,19 +40,31 @@
       <image:loc>https://carefilledsupportformeg.com/images/meagan/meagan2.jpg</image:loc>
       <image:title>Meagan portrait</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://carefilledsupportformeg.com/images/logo/logo.png</image:loc> <!-- Used on about page -->
+      <image:title>Care-Filled Support for Meg Logo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://carefilledsupportformeg.com/services.html</loc>
     <image:image>
-      <image:loc>https://carefilledsupportformeg.com/images/meagan/meagan3.jpg</image:loc>
+      <image:loc>https://carefilledsupportformeg.com/images/Meagan/meagan3.jpg</image:loc> <!-- Corrected case -->
       <image:title>Meagan enjoying activities</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://carefilledsupportformeg.com/images/logo/logo5.png</image:loc> <!-- Used on services page -->
+      <image:title>Care-Filled Support for Meg Logo</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://carefilledsupportformeg.com/join.html</loc>
     <image:image>
-      <image:loc>https://carefilledsupportformeg.com/images/team/team3.png</image:loc>
-      <image:title>Elaine - Lead Caregiver</image:title>
+      <image:loc>https://carefilledsupportformeg.com/images/team/team3.png</image:loc> <!-- Charmaine's placeholder -->
+      <image:title>Caregiving Team Member</image:title> <!-- Corrected title -->
+    </image:image>
+    <image:image>
+      <image:loc>https://carefilledsupportformeg.com/images/logo/logo2.png</image:loc> <!-- Used on join page -->
+      <image:title>Care-Filled Support for Meg Logo</image:title>
     </image:image>
   </url>
   <url>
